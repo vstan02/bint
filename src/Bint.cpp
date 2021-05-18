@@ -265,7 +265,7 @@ bool Bint::operator<(const Bint& num) const {
 }
 
 bool Bint::operator<=(const Bint& num) const {
-    return *this == num && *this < num;
+    return *this == num || *this < num;
 }
 
 bool Bint::operator>(const Bint& num) const {
@@ -305,7 +305,6 @@ bool Bint::lt(const std::string& str1, const std::string& str2) const {
     }
     return false;
 }
-
 
 std::string Bint::add(const std::string& str1, const std::string& str2) const {
     const std::string& min = str1.size() < str2.size() ? str1 : str2;

@@ -122,3 +122,39 @@ TEST(Bint, __MOD__) {
     ASSERT_EQ(Bint("-108") % -54, 0);
     ASSERT_THROW(Bint(34) % 0, std::runtime_error);
 }
+
+TEST(Bint, __LT__) {
+    ASSERT_TRUE(Bint() < 43);
+    ASSERT_TRUE(Bint(2) < 23);
+    ASSERT_TRUE(Bint(-5) < 2);
+    ASSERT_FALSE(Bint(323) < 43);
+    ASSERT_FALSE(Bint("-0") < 0);
+    ASSERT_FALSE(Bint() < -3);
+}
+
+TEST(Bint, __LTE__) {
+    ASSERT_TRUE(Bint() <= 43);
+    ASSERT_TRUE(Bint(2) <= 23);
+    ASSERT_TRUE(Bint("-0") <= 0);
+    ASSERT_FALSE(Bint(5) <= 2);
+    ASSERT_FALSE(Bint(-34) <= -43);
+    ASSERT_FALSE(Bint() <= -3);
+}
+
+TEST(Bint, __GT__) {
+    ASSERT_TRUE(Bint(5) > 2);
+    ASSERT_TRUE(Bint(-34) > -43);
+    ASSERT_TRUE(Bint() > -3);
+    ASSERT_FALSE(Bint() > 43);
+    ASSERT_FALSE(Bint(2) > 23);
+    ASSERT_FALSE(Bint("-0") > 0);
+}
+
+TEST(Bint, __GTE__) {
+    ASSERT_TRUE(Bint(323) >= 43);
+    ASSERT_TRUE(Bint("-0") >= 0);
+    ASSERT_TRUE(Bint() >= -3);
+    ASSERT_FALSE(Bint() >= 43);
+    ASSERT_FALSE(Bint(2) >= 23);
+    ASSERT_FALSE(Bint(-5) >= 2);
+}
