@@ -1,5 +1,5 @@
 /* Bint - A simple big integer library
- * Copyright (C) 2021 Stan Vlad <vstan02@protonmail.com>
+ * Copyright (C) 2021-2022 Stan Vlad <vstan02@protonmail.com>
  *
  * This file is part of Bint.
  *
