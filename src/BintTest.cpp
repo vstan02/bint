@@ -28,13 +28,6 @@ TEST(Bint, Bint) {
     ASSERT_EQ(Bint("-0"), Bint("0"));
     ASSERT_EQ(Bint(438), Bint("438"));
     ASSERT_EQ(Bint(-326), Bint("-326"));
-
-    ASSERT_TRUE(Bint("-54") < 0);
-    ASSERT_TRUE(Bint(56) < 76);
-    ASSERT_TRUE(-Bint(54) < 0);
-    ASSERT_FALSE(Bint() < -43);
-    ASSERT_FALSE(Bint("-0") < 0);
-    ASSERT_FALSE(Bint(-54) < -Bint(54));
 }
 
 TEST(Bint, size) {
