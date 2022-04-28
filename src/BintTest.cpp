@@ -28,6 +28,7 @@ TEST(Bint, Bint) {
     ASSERT_EQ(Bint("-0"), Bint("0"));
     ASSERT_EQ(Bint(438), Bint("438"));
     ASSERT_EQ(Bint(-326), Bint("-326"));
+	ASSERT_EQ(Bint(-15), -Bint(15));
 }
 
 TEST(Bint, size) {
